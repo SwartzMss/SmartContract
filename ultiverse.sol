@@ -13,7 +13,7 @@ contract ultiverseDecoder {
 	bytes32 data = 0x9f83f1bdc4255f9a81401c66eeac7004972f75e517c4552738b0e0d9cb2872b4;
 	bytes signatureinfo = 0x2c744dd258d055e9aad4814247cdf79aefdeab3bc949f04a08c13ef394b2e6bb3b3a8ff76762691ee59c4d3a8475cd5113079e0bcdf3c21b7ef14d5f4822fa171c;
 
-    function encode() public view returns(bytes memory result) {
+    function encodeUltiverse() public view returns(bytes memory result) {
         result = abi.encode(deadline, destinations, data, signatureinfo);
     }
 }

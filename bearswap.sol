@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-contract mydecoder {
+contract bearswapDecoder {
     enum SwapKind {
         GIVEN_IN,
         GIVEN_OUT

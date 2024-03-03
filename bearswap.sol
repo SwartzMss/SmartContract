@@ -16,9 +16,13 @@ contract bearswapDecoder {
         bytes userData;
     }
 
-    function decodeABI(bytes calldata data) external pure returns (SwapKind kind, BatchSwapStep[] memory swaps, uint256 deadline) {
+    function decodeABIForBtachSwap(bytes calldata data) external pure returns (SwapKind kind, BatchSwapStep[] memory swaps, uint256 deadline) {
         (kind, swaps, deadline) = abi.decode(data, (SwapKind, BatchSwapStep[], uint256));
         return (kind, swaps, deadline);
     }
 
+    function decodeABIForApprove(bytes calldata data) external pure returns (address add,uint256 inputdata) {
+        (add, inputdata) = abi.decode(data, (address,uint256));
+        return (add, inputdata);
+    }
 }

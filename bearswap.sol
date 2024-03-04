@@ -25,4 +25,9 @@ contract bearswapDecoder {
         (add, inputdata) = abi.decode(data, (address,uint256));
         return (add, inputdata);
     }
+    function decodeABIForMint(bytes calldata data) external pure returns (address add1, address add2,uint256 inputdata) {
+        (add1, add2, inputdata) = abi.decode(data, (address,address,uint256));
+        return (add1, add2, inputdata);
+    }
+    
 }
